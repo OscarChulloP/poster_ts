@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+
+
+
+<title>UNIVERSIDAD NACIONAL DE SAN ANTONIO ABAD DEL CUSCO “Modelamiento Predictivo de Créditos Vencidos”</title>
+
+
+
+
+
+
+<style>
+@page {
+size: 33.5in 47.5in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 45px;
+width: 33.5in;
+height: 47.5in;
+padding: 0;
+text-align: justify;
+font-family: Palatino;
+}
+.poster_wrap {
+width: 33.5in;
+height: 47.5in;
+padding: 0cm;
+}
+.title_container {
+width: 33.5in;
+height: calc(47.5in * 0.15);
+overflow: hidden;
+background-color: #080e3b;
+border: 0 solid #469bf0;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #080e3b;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #080e3b;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Palatino;
+}
+/* unvisited link */
+a:link {
+color: #48dcf0;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #48dcf0;
+}
+
+/* mouse over link */
+a:hover {
+color: #48dcf0;
+}
+
+/* selected link */
+a:active {
+color: #48dcf0;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #080e3b;
+-moz-column-rule-color: #080e3b;
+column-rule-color: #080e3b;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 60pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(33.5in + 0 + 0);
+height: calc(47.5in * 0.83);
+padding-top: calc(47.5in * 0.005);
+padding-bottom: calc(47.5in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #469bf0;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 2mm solid #080e3b;
+background-color: #080e3b;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #469bf024;
+color: #080e3b;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src= 'imagenes/unsaac.png' style="width: 80%">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">UNIVERSIDAD NACIONAL DE SAN ANTONIO ABAD DEL CUSCO “Modelamiento Predictivo de Créditos Vencidos”</h1>
+<h3 id="author">Chullo P. Oscar<sup>STU</sup>, Huaccanqui C. Jesús R.<sup>STU</sup>, Valencia T. Alfredo<sup>SUPERV</sup></h3><br>
+<h5 id="affiliation"><sup>°</sup> Facultad de Ciencias Físicas, Quimicas y Matemáticas<br> <sup>°</sup> Escuela Profesional de Matemática y Estadística<br> <sup>EMAIL</sup> <a href="mailto:193029@unsaac.edu.pe" class="email">193029@unsaac.edu.pe</a> / <a href="mailto:183065@unsaac.edu.pe" class="email">183065@unsaac.edu.pe</a> / <a href="mailto:alfredo.valencia@unsaac.edu.pe" class="email">alfredo.valencia@unsaac.edu.pe</a></h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+<img src=imagenes/mate2.png style="width: 80%">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<div id="resumen" class="section level1">
+<h1>Resumen</h1>
+<p>El propósito del siguiente póster es dar a conocer los resultados de la evaluacion y <code>pronóstico</code> de una <code>serie temporal</code> en la que se recopilo informacion de la SBS: <code>Créditos vencidos</code> para los análisis respectivos. aplicandose dos modelos predictivos: <code>Suavizamiento exponencial de Holt</code> y la <code>Metodologia de Box Jenkins</code>, determinandose que este último es el modelo mas adecuado para realizar los pronosticos de nuestra serie temporal.</p>
+<p><strong><em>Palabras Clave:</em></strong> <em>Pronóstico</em>, <em>Serie Temporal</em>, <em>Créditos vencidos</em>, <em>Suavizamiento exponencial de Holt</em>, <em>Metodologia de Box Jenkins</em>.</p>
+</div>
+<div id="introducción" class="section level1">
+<h1>Introducción</h1>
+<p>En la última década se ha hecho evidente la participación activa de las entidades financieras, mas aún en la época actual de <code>reactivación económica</code> del pais, tales como son las cajas municipales. La situación de los creditos otorgados a los clientes es una problemática mas recurrente que tienen dichas entidades, debido a que tienen que afrontar el riesgo de los <code>créditos vencidos</code> que cada vez tienen un mayor impacto.</p>
+<p>Se plantearon los siguientes objetivos: Evaluar modelos de series temporales que nos permitan pronosticar los <code>créditos vencidos</code> y determinar el modelo de series temporales de mayor precisión. <span class="citation">(Thorne 2019)</span>.</p>
+</div>
+<div id="metodología" class="section level1">
+<h1>Metodología</h1>
+<p>Se ha utilizado una base de datos que fue obtenida de la base de datos de la SBS, el cual cuenta con 261 datos recopilados mensualmente en el periodo 01/2001 a 09/2022, en los que se tienen la estimacion total de los créditos vencidos que ocurren en las cajas municipales de todo el Peru en dicho periodo de tiempo.</p>
+<p>Es por ello que para identificar un modelo adecuado se ha establecido seguir un flujo de modelamiento (<strong><em>Fig.1</em></strong>) para nuestra serie temporal</p>
+<p><strong>Figura 1:</strong> <em>Pasos del Modelamiento</em></p>
+<p><img src="imagenes/flujo.png" style="width:100.0%" /></p>
+</div>
+<div id="resultados" class="section level1">
+<h1>Resultados</h1>
+<p>En el <code>entendimiento de la data</code> se realizo un análisis exploratorio en los que se pudo identificar que nuestra serie <code>creditos_vencidos.ts</code> solo presenta tendencia (<strong><em>Fig. 2</em></strong>), luego se procedio a dividir nuestra data en: entrenamiento y prueba, estableciendose prueba a los ultimos 12 meses de la serie; dado esto se procedió a aplicar el <code>Suavizado Exponencial de Holt</code> para ajustar eficazmente el modelo a dicha tendencia en los datos.</p>
+<p><strong>Figura 2:</strong> <em>Serie temporal: Créditos Vencidos</em></p>
+<p><img src="Post_ts_files/figure-html/unnamed-chunk-1-1.png" width="95%" style="display: block; margin: auto;" /></p>
+<p><strong>Suavizamiento exponencial de Holt</strong></p>
+<p>Escribe aqui, puedes colocar algunas metricas y resultados</p>
+<p><strong>Metodología Box Jenkins</strong></p>
+<p><strong>Figura 3:</strong> <em>Pasos de la metodología Box Jenkins</em>
+<img src="imagenes/bj.png" style="width:100.0%" />
+Para cumplir las condiciones necesarias, se evaluó si nuestra serie era estacionaria, obteniendose un p_value=0.4062, que nos indica que no es estacionaria, por ende se procedio a inducirla, en vista a que nuestra varianza no era homogenea, se utilizo la transformacion de BOX COX con un parámetro <span class="math inline">\(\lambda=0\)</span>, obteniendose una varianza homogenea para nuestra serie.</p>
+<p>La serie presentaba tendencia, por lo que se le ha aplicado la diferenciación regular con parametro <span class="math inline">\(d=1\)</span> pudiendo estabilizarla.</p>
+<p>Finalmente se identificó que la serie presentaba estacionalidad, por lo que se procedio a aplicar una diferenciación estacional, con una ciclicidad anual.</p>
+<p>Dado esto, se ha evaluado que la serie ya era estacionaria, obteniendose un <span class="math inline">\(p-value=0.01\)</span>.</p>
+<p>Con las transformaciones y diferenciaciones que fueron aplicadas, se han planteado modelos tentativos, de los cuales se obtuvo que el modelo que mejor se ajusta a nuestra serie es:</p>
+<p><strong><em>Modelo: <span class="math inline">\(sARIMA(0,1,10)*(0,1,2)_{12}\)</span></em></strong></p>
+<p><span class="math display">\[(1-B)(1-B^{12})^2*X_t=c+(1+\theta_1*B+...+\]</span>
+<span class="math display">\[\theta_{10}*B^{10})*(1+\Theta_1*B^{12}+\Theta_1*B^{12})*\alpha_t\]</span></p>
+<p><strong>Figura n:</strong> <em>Predicciones del modelo <span class="math inline">\(sARIMA(0,1,10)(0,1,2)_{12}\)</span></em></p>
+<p><img src="imagenes/sarimaz.png" style="width:100.0%" /></p>
+<p><strong>Comparación de modelos</strong></p>
+</div>
+<div id="conclusión" class="section level1">
+<h1>Conclusión</h1>
+<p>En conclusión, se tiene que el modelo <code>Random Forest</code> es el modelo predictivo con mejores características si se quiere determinar la <code>probabilidad de impago</code> de un cliente.
+Puesto que cuenta con una mayor precisión que el modelo <code>Regresión Logística</code>. <span class="citation">(Bellini 2019)</span>
+as</p>
+<p>sa
+as
+as
+sa
+as
+sa
+sa
+as
+as
+as
+as
+as
+as
+as
+sasaas
+as</p>
+<p>assa
+sa
+as
+as</p>
+<p>as</p>
+<p>Try <code>posterdown</code> out! Hopefully you like it!</p>
+</div>
+<div id="referencias" class="section level1 unnumbered">
+<h1>Referencias</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-ifrs" class="csl-entry">
+Bellini, T. 2019. <em>IFRS 9 and CECL Credit Risk Modelling and Validation: A Practical Guide with Examples Worked in r and SAS</em>. Elsevier Science. <a href="https://books.google.com.pe/books?id=Xp-SuAEACAAJ">https://books.google.com.pe/books?id=Xp-SuAEACAAJ</a>.
+</div>
+<div id="ref-R-posterdown" class="csl-entry">
+Thorne, Brent. 2019. <em>Posterdown: Generate PDF Conference Posters Using r Markdown</em>. <a href="https://github.com/brentthorne/posterdown">https://github.com/brentthorne/posterdown</a>.
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+var script = document.createElement("script");
+script.type = "text/javascript";
+var src = "true";
+if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+if (location.protocol !== "file:" && /^https?:/.test(src))
+src = src.replace(/^https?:/, '');
+script.src = src;
+document.getElementsByTagName("head")[0].appendChild(script);
+})();
+</script>
+
+
+</body>
+</html>
